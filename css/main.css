@@ -1,0 +1,82 @@
+:root {
+    --main-color: #fec260;
+    ;
+    --secondary-color: #352e28;
+}
+
+::selection {
+    background-color: var(--main-color);
+}
+
+body {
+    background-color: #f7ecde;
+    color: var(--secondary-color);
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    width: 100%;
+    height: 20px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+h1:hover::after {
+    height: 40px;
+}
+
+.new-bookmark {
+    border-top: 2px dotted var(--secondary-color);
+    border-bottom: 2px dotted var(--secondary-color);
+}
+
+h2 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.form-control:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.new-bookmark #addBtn {
+    background-color: #d1512d;
+    border-color: #d1512d;
+}
+
+.new-bookmark #addBtn:hover {
+    background-color: #b8402b;
+    border-color: #b8402b;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    background-color: #f8f9fa;
+}
+
+.table .visit-btn {
+    background-color: #9eb23b;
+    border-color: #9eb23b;
+}
+
+.table .visit-btn:hover {
+    background-color: #6e8018;
+    border-color: #6e8018;
+}
