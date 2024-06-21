@@ -19,7 +19,6 @@ function addBookmark() {
         var url = siteUrlInput.value;
         if (!url.startsWith("https://")) {
             url = "https://" + url;
-            console.log(url);
         }
         var bookmark = {
             name: siteNameInput.value,
@@ -145,6 +144,8 @@ function deleteBookmark() {
     var myModalEl = document.getElementById("cancelDeleteModal");
     var modal = bootstrap.Modal.getInstance(myModalEl);
     modal.hide();
+    // Close update page after deletion if opened
+    cancelUpdate();
 }
 function validateInputs(element) {
     var regex = {
